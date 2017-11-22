@@ -1,0 +1,14 @@
+{
+  "name": "simple_node_proj",
+  "version": "1.0.0",
+  "description": "simple demo",
+  "main": "simple_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^2.2.33"
+  }
+}

@@ -5,16 +5,16 @@ const refresh = (html, callback) => {
 	MongoClient.connect( mongo_url, (err, db) => {
 		if (err) return db.close();
 		let cursor = db.collection('employee').find({});
-		content += '<table border="1"><tr><th>Name</th><th>Department</th><th>title</th></tr>';
+		html += '<table border="1"><tr><th>Name</th><th>Department</th><th>title</th></tr>';
 		cursor.each( (err, doc) => {
 			if (doc != null) 
 				html += `<tr><td>${doc.usrName}</td><td>${doc.usrDept}</td><td>${doc.usrTitle}</td></tr>`;
 			else {
 				html += '</table>';
 				callback(html);
+				db.close();
 			}
 		});
-		db.close();
 	});		
 };		
 require('http')

@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const mongo_url = 'mongodb://demo_user1:funnycat@localhost:27017/simple_demo';
+const mongo_url = 'mongodb://demo_user1:funnycat@54.169.42.64:27017/simple_demo';
 let content = '<h1>hello world</h1>';
 const refresh = (html, callback) => {
 	MongoClient.connect( mongo_url, (err, db) => {

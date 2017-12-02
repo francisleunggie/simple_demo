@@ -10,5 +10,5 @@ var emp = [{usrName:'Hilton Hurston',usrDept:'IT',usrTitle:'Department Head',aut
 
 var i;
 for (i=0; i < emp.length; i++) {
-	db.getCollection.insert(emp[i]);
+	db.getCollection('employee').insert(emp[i]);
 }
